@@ -1,0 +1,202 @@
+@use'./about.scss'; 
+@use'./about2.scss';
+@use'./blog.scss'; 
+@use'./homepage.scss'; 
+@use'./homwpage-v2.scss';
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+$primary-color: #0A2640;
+$secondry-color: #65E4A3;
+
+// Rangi va boshqa sozlamalar uchun o'zgaruvchilar
+$primary-color: #0A2640;
+$text-color: #fff;
+$mobile-breakpoint: 768px;
+
+header {
+  background: $primary-color;
+  padding: 15px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: $text-color;
+  }
+
+  .nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+    li a {
+      color: $text-color;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: darken($text-color, 20%);
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none; // Desktopda yashirish
+    font-size: 28px;
+    color: $text-color;
+    cursor: pointer;
+  }
+
+  // **Moslashuvchanlik qo'shish**
+  @media (max-width: $mobile-breakpoint) {
+    .nav {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: $primary-color;
+      text-align: center;
+
+      ul {
+        flex-direction: column;
+        padding: 10px 0;
+        
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+
+    .menu-toggle {
+      display: block; // Mobil versiyada ko‘rinadi
+    }
+
+    // Agar menyu ochilgan bo‘lsa
+    .nav.active {
+      display: block;
+    }
+  }
+}
+
+
+
+$primary-color: #2c3e50;
+$secondary-color: #666;
+$badge-color: #2ecc71;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+.footer {
+    background: #fff;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .footer-logo {
+        max-width: 300px;
+
+        h2 {
+            color: $primary-color;
+        }
+
+        p {
+            font-size: 14px;
+            color: $secondary-color;
+        }
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .column {
+        h4 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: $primary-color;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+
+            a {
+                text-decoration: none;
+                color: $secondary-color;
+                transition: color 0.3s;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .badge {
+        background: $badge-color;
+        color: white;
+        font-size: 12px;
+        padding: 3px 8px;
+        border-radius: 12px;
+        margin-left: 5px;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
