@@ -509,9 +509,11 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.blog-card img {
-  border-radius: 10px;
-  width: 100%;
+.blog-card {
+  .hh{
+    border-radius: 10px;
+    width: 100%;
+  }
 }
 
 
