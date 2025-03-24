@@ -1,1 +1,26 @@
-/*# sourceMappingURL=homepage.css.map */
+.boldo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.boldo-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.boldo-section__left h1 {
+  font-family: Manrope;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #000000;
+}
+.boldo-section__left p {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #777777;
+}/*# sourceMappingURL=homepage.css.map */
